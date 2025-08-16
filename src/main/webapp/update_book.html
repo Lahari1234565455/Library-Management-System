@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Update Book | Library Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: #00bcd4;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px #111;
+        }
+
+        h3 {
+            margin-bottom: 30px;
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        form input[type="text"]:focus {
+            background: rgba(0, 188, 212, 0.1);
+            border: 1px solid #00bcd4;
+        }
+
+        form input[type="submit"] {
+            padding: 10px 25px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            background-color: #00bcd4;
+            color: #0d1117;
+            transition: all 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #0d1117;
+            color: #00bcd4;
+            border: 1px solid #00bcd4;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Library Management System</h1>
+        <h3>Update Book</h3>
+
+        <form action="book_update_controller.jsp" method="post">
+            <input type="text" name="id" placeholder="Enter Book ID" required />
+            <input type="submit" value="Update Book" />
+        </form>
+
+        <a href="home.html">Go back to Home</a>
+    </div>
+</body>
+
+</html>

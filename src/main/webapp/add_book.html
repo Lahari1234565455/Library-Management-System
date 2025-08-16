@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book | Library Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & Fonts */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #0d1117;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: #00bcd4;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 5px #111;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        form table {
+            width: 100%;
+        }
+
+        form td {
+            padding: 12px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus {
+            background: rgba(0, 188, 212, 0.1);
+            border: 1px solid #00bcd4;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 25px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        input[type="submit"] {
+            background-color: #00bcd4;
+            color: #0d1117;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0d1117;
+            color: #00bcd4;
+            border: 1px solid #00bcd4;
+        }
+
+        input[type="reset"] {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #00bcd4;
+            color: #0d1117;
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        td:first-child {
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Library Management System</h1>
+        <h3>Add Book</h3>
+        <form action="add_book_controller.jsp" method="post">
+            <table>
+                <tr>
+                    <td><label>Book ID:</label></td>
+                    <td><input type="text" name="id" placeholder="e.g. 123" required /></td>
+                </tr>
+                <tr>
+                    <td><label>Title:</label></td>
+                    <td><input type="text" name="title" placeholder="e.g. Wings of Fire" required /></td>
+                </tr>
+                <tr>
+                    <td><label>Author:</label></td>
+                    <td><input type="text" name="author" placeholder="e.g. Dr. A.P.J. Abdul Kalam" required /></td>
+                </tr>
+                <tr>
+                    <td><label>Quantity:</label></td>
+                    <td><input type="text" name="quantity" placeholder="e.g. 2" required /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Add Book" /></td>
+                    <td><input type="reset" value="Clear" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center; padding-top:10px;">
+                        <a href="home.html">Go back to Home</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
